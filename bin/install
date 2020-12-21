@@ -20,8 +20,7 @@ install_plugin() {
 
   echo "Downloading earthly from $download_url"
   curl -L -s "$download_url" -o "$tmp_download_file"
-  pushd $bin_install_path > /dev/null
-  popd > /dev/null
+  mv $tmp_download_file $install_path/earthly
 }
 
 get_platform() {
